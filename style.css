@@ -12,6 +12,7 @@
   --red: #e4002b;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --sidebar: 14rem; /* width of the left menu */
+    color-scheme: light;
 }
 
 /* 2. RESET: remove the browser's default spacing */
@@ -21,15 +22,16 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth; /* smooth scrolling for the menu links */
-}
-
 body {
   font-family: var(--font);
   background: var(--white);
   color: var(--black);
   line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth scrolling for the menu links */
+  background: var(--white);
 }
 
 a {
