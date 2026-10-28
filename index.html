@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the site fit on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Odd Hours | Streetwear</title>
+  <link rel="icon" href="images/oddhours-logo.png">
+  <meta name="description" content="Odd Hours is a small streetwear brand. Tees, hoodies and caps in limited drops.">
+
+  <!-- Link to our CSS file (the looks) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Thin bar at the very top -->
+  <div class="announcement">Free shipping over €75 · Season 01 is out now</div>
+
+  <!-- HEADER: logo, menu, cart button -->
+  <header class="site-header">
+    <a href="#top" class="logo">
+      <img src="images/oddhours-logo.png" alt="Odd Hours">
+    </a>
+
+    <nav class="main-nav" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- The number inside <span> is changed by JavaScript -->
+    <button class="cart-button" id="open-cart">Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO: the first thing people see -->
+    <section class="hero">
+      <img class="hero-image" src="images/mp3-player.webp" alt="Old MP3 player with earphones on a dark background">
+      <div class="hero-side">
+        <p>Clothes for the time between late and early. Small batches, no restocks.</p>
+        <a href="#shop" class="button">Shop the drop</a>
+      </div>
+    </section>
+
+    <!-- SHOP: the product cards are built by JavaScript -->
+    <section class="shop" id="shop">
+      <div class="shop-top">
+        <h2>Shop</h2>
+
+        <!-- Filter buttons. data-filter tells JavaScript which category to show -->
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="tees">Tees</button>
+          <button class="filter" data-filter="hoodies">Hoodies</button>
+          <button class="filter" data-filter="caps">Caps</button>
+        </div>
+      </div>
+
+      <!-- Empty on purpose. script.js fills this with products -->
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>Odd Hours started with a few shirts printed in a bedroom. We make small runs in heavy cotton, and when a piece is sold out, it is gone for good.</p>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter" id="contact">
+      <h2>Get the next drop first</h2>
+      <form id="newsletter-form">
+        <label for="email" class="visually-hidden">Email address</label>
+        <input type="email" id="email" placeholder="Your email" required>
+        <button type="submit" class="button">Sign up</button>
+      </form>
+      <p id="newsletter-message" class="newsletter-message" role="status"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Odd Hours</span>
+    <span>School project, not a real store</span>
+  </footer>
+
+  <!-- CART DRAWER: slides in from the right -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your cart</h2>
+      <button id="close-cart" aria-label="Close cart">Close</button>
+    </div>
+
+    <ul class="cart-items" id="cart-items"></ul>
+
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="cart-total">€0.00</span></p>
+      <button class="button full" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Link to our JavaScript file (the behaviour). Placed last so the page is loaded first -->
+  <script src="script.js"></script>
+</body>
+</html>
