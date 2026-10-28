@@ -267,7 +267,12 @@ h2 {
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  padding: 1rem;
+  padding: 0;
+  border: 1px solid var(--black);
+}
+
+.product-card:hover .product-image {
+   border: 5px solid var(--black); 
 }
 
 .product-image img {
